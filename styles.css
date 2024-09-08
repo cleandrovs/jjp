@@ -1,0 +1,223 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #0a4c83; /* Azul del logo */
+    padding: 20px;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para permitir que los elementos se acomoden en pantallas pequeñas */
+    flex-direction: row-reverse;
+}
+
+.logo {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.cta {
+    background-color: #D0021B; /* Rojo del logo */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: #ff4040;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.pexels.com/photos/224924/pexels-photo-224924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(28, 28, 29);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    font-size: 20px;
+    background-color: #D0021B;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    background-color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #002F6C;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Asegura que las tarjetas de servicios se ajusten en pantallas pequeñas */
+}
+
+.service {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #002F6C;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #0a4c83;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer ul li {
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas como móviles (menos de 768px de ancho) */
+@media (max-width: 768px) {
+    /* Ajustes generales */
+    .container {
+        width: 90%; /* Más ancho para aprovechar mejor el espacio */
+    }
+
+    /* Header */
+    header .container {
+        flex-direction: column; /* Cambia el diseño a una columna */
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0; /* Elimina el margen lateral */
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 36px; /* Disminuye el tamaño de la fuente */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero .cta {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    /* Servicios */
+    .service {
+        width: 100%; /* Las tarjetas de servicio ocupan todo el ancho en móviles */
+        margin-bottom: 20px;
+    }
+}
+
+/* Para pantallas medianas como tabletas (menos de 1024px de ancho) */
+@media (max-width: 1024px) {
+    /* Ajustes generales */
+    .container {
+        width: 85%; /* Más ancho en tabletas */
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 42px; /* Ajusta el tamaño del texto para tabletas */
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Servicios */
+    .service {
+        width: 45%; /* Las tarjetas de servicio ocupan el 45% del ancho en tabletas */
+        margin-bottom: 20px;
+    }
+}
