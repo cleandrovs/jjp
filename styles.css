@@ -26,10 +26,7 @@ header {
 
 header .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Para permitir que los elementos se acomoden en pantallas pequeñas */
-    
+    justify-content: space-around;  
 }
 
 .logo {
